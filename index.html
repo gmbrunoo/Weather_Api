@@ -8,30 +8,32 @@
     <meta name="author" content="Bruno Godinho e Isaque Costa">
 
     <title>Weather App</title>
-
+    <link rel="icon" type="image/x-icon" href="/img/partly-cloudy-day.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="wrap">
-        <div class="search">
-            <input type="text" class="search-bar" placeholder="Search" id="search">
-            <button id="submit-button">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="tempo">
-            <h2 class="cidade">Brazil, Sao Paulo</h2>
-              <div class="temperatura">37°C</div>
-            <img src="" alt="" class="icone"/>
+    <div class="main">
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search" id="search">
+                <button id="submit-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
             
-            <div class="descricao">Cloud</div>
-            <div class="humidade">Humidity: 60%</div>
-            <div class="vento">Wind speed: 6.2 km/h</div>
+            <div class="tempo" id="tempo">
+            </div>
+        </div>
+
+        <div class="wrap-days">
+            <h2>Forecast for the next few days</h2>
+            <hr size="3" width="100%" color="white">
+            <div class="previsao" id="previsao"></div>
         </div>
     </div>
 </body>
 
-<script src="index.js" defer></script>
 </html>
