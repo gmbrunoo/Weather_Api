@@ -3,9 +3,9 @@ const input = document.getElementById('submit-button');
 const previsao = document.getElementById('previsao');
 
 let apiKey = "&appid=248d2ca65b95fa08cf3d4a566588b80a"
-let coordEndpoint = "http://api.openweathermap.org/geo/1.0/direct?q="
+let coordEndpoint = "https://api.openweathermap.org/geo/1.0/direct?q="
 let weatherEndpoint = "https://api.openweathermap.org/data/2.5/weather?"
-let nextDaysEndpoint = "http://api.openweathermap.org/data/2.5/forecast?"
+let nextDaysEndpoint = "https://api.openweathermap.org/data/2.5/forecast?"
 
 window.addEventListener('load', () => {
     fetchCoord("londres")
