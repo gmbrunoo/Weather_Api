@@ -110,7 +110,7 @@ span, p {
   height: 100%;
   width: 100%;
   align-content: center;
-  gap: 70px;
+  gap: 50px;
   justify-content: flex-start;
   align-items: flex-end;;
 }
@@ -265,6 +265,10 @@ span, p {
 
 .img-developer{
   width: 80px;
+}
+
+.fas {
+  padding-right: 5px;
 }
 
 @media (max-width: 1800px){

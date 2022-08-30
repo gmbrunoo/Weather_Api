@@ -97,10 +97,11 @@ function renderResults(wind, name, temp, tempMax, tempMin, description,  country
         <div class='more-details'>
             <h2>More Details: </h2>
             <div class="details-data">
-                <span>Wind speed: <b>${wind} m/s</b></span><br>
-                <span>Air Humidity: <b>${humidity}%</b></span><br>
-                <span>Min: <b>${temperaturaMin}</b></span><br>
-                <span>Max: <b>${temperaturaMax}</b></span><br>
+                <span><i class="fas fa-temperature-low"></i> Min: <b>${temperaturaMin}</b></span><br>
+                <span><i class="fas fa-temperature-high"></i> Max: <b>${temperaturaMax}</b></span><br>
+                <span><i class="fas fa-tint"></i> Air Humidity: <b>${humidity}%</b></span><br>
+                <span><i class="fas fa-wind"></i> Wind speed: <b>${wind} m/s</b></span><br>
+                <span><i class="fas fa-stopwatch"></i> Pressure: <b>${pressure} hPa</b></span><br>
             </div>
         </div>
         
