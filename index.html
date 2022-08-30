@@ -9,30 +9,58 @@
 
     <title>Weather App</title>
     <link rel="icon" type="image/x-icon" href="/img/partly-cloudy-day.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
     <script src="./js/index.js" defer></script>
 </head>
 <body>
     <div class="main">
-        <div class="wrap">
+
+        <div class="wrap-nav">
+            
+            <div class="info" id="info">
+
+                
+            </div>
+            
+
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search" id="search">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" class="search-bar" placeholder="Change Location" id="search" />
                 <button id="submit-button">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
             </div>
-            
-            <div class="tempo" id="tempo"></div>
         </div>
+        
+        <div class="wrap-details">
+            <div class="climate" id="climate">
+                
+            </div>
 
-        <div class="wrap-days">
-            <h2>Forecast for the next few days</h2>
-            <hr size="3" width="100%" color="white">
-            <div class="previsao" id="previsao"></div>
+            <div class="forecast">
+                <div class="forecast-title">forecast for tomorrow</div>
+                <div class="time">
+                    <span>Night</span>
+                    <span>Morning</span>
+                    <span>Day</span>
+                    <span>Evening</span>
+                </div>
+               
+                <div class="forecast-time" id="forecast-time">
+                   
+                    
+                </div>
+            </div>
+            
         </div>
+        <div class="wrap-forecast" id="wrap-forecast"></div>
+ 
     </div>
-</body>
+
+<!-- 
+    <div class="climate" id="climate"></div> -->
+
 
 </html>
