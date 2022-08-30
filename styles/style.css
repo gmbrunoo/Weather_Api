@@ -14,7 +14,7 @@ body {
   background-color: #222;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/mountain_landscape16_generated.jpg");
+  background-image: url("../img/beautiful-sunset-mountains-landscape-with-sun-light-shining-through-orange-clouds-fog.jpg");
   max-width: 1800px;
   margin: auto;
 }
@@ -32,11 +32,13 @@ span, p {
   justify-content: space-between;
   height: 100vh;
   letter-spacing: 1.2px;
+  padding: 5rem;
 }
 
 .wrap-nav {
   width: 100%;
   letter-spacing: 1.3px;
+  color: rgb(255, 255, 255);
 }
 
 .wrap-nav .info {
@@ -52,6 +54,7 @@ span, p {
 
 .wrap-nav .info b{
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .search-bar {
@@ -60,19 +63,22 @@ span, p {
   padding: 0.5em 1em;
   border-radius: 24px;
   background: transparent;
-  color: white;
+  color: #fff;
   font-size: 120%;
   width: 200px ;
+  font-weight: 500;
 }
 
 .search-bar::placeholder{
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
+  
 }
 
 .search-bar:focus{
-  color: white;
+  color: rgba(255, 255, 255, 1);
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 #submit-button {
@@ -81,7 +87,7 @@ span, p {
   height: 46px;
   width: 46px;
   outline: none;
-  background: #7c7c7c2b;
+  background: #0000001f;
   color: white;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -94,7 +100,6 @@ span, p {
   align-content: center;
   align-items: center;
   justify-content: space-between;
-  height: 250px;
 }
 
 .wrap-details .climate {
@@ -115,7 +120,7 @@ span, p {
 }
 
 .wrap-details .climate .sunset .icon{
-  max-width: 100px;
+  max-width: 160px;
 }
 
 .wrap-details .climate .sunset .icon img{
@@ -142,15 +147,11 @@ span, p {
 }
 
 .more-details h2{
-  padding-bottom: 20px;
+  padding-bottom: 55px;
   text-transform: uppercase;
   font-size: 1.3rem;
   text-align: left;
   font-weight: 400;
-}
-
-.more-details span {
-  line-height: 2;
 }
 
 .more-details span b{
@@ -159,7 +160,6 @@ span, p {
 
 .wrap-forecast {
   width: 100%;
-  height: 25%;
   text-align: left;
 }
 
@@ -192,7 +192,7 @@ span, p {
   box-shadow: 0 1px 25px rgb(0 0 0 / 39%);
   border-radius: 5px;
   background: rgb(0 0 0 / 25%);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
@@ -221,7 +221,13 @@ span, p {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.forecast-data span:nth-child(1){
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);;
+  font-weight: 100;
 }
 
 .forecast-data, .weather-forecast{
@@ -236,7 +242,7 @@ span, p {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -259,4 +265,41 @@ span, p {
 
 .img-developer{
   width: 80px;
+}
+
+@media (max-width: 1800px){
+
+  .wrap-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+    padding: 0 50px;
+  }
+
+  .wrap-details {
+    flex-direction: column;
+    width: 1200px;
+    gap: 20px;
+    padding: 50px;
+    margin: auto;
+  }
+
+  .wrap-details .climate{
+    justify-content: space-between;
+  }
+
+  .wrap-forecast{
+    width: 1200px;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .weather-forecast-data{
+    text-align: center;
+  }
+
+  .wrap-forecast .min-max{
+    align-items: center;
+  }
 }

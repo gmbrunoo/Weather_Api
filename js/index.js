@@ -61,10 +61,7 @@ async function fetchWeather(lat, lon, state){
 
     let name = weather.name
 
-    console.log(weather.sys.sunrise)
-    console.log(weather.sys.sunset)
-
-    info.innerHTML = `<p> Weather in <b>${name}</b> - ${country} </p> <div class="temp-scales"> °C | °F </div>`
+    info.innerHTML = `<p> Weather in <b>${name}</b> - ${country} </p> <div class="temp-scales"> <b>°C</b> | °F </div>`
 
     renderResults(wind, name, temp, tempMax, tempMin, description, country, state, icon, sunrise, sunset, feels, humidity, pressure)
 }
@@ -240,6 +237,8 @@ function get5DaysWeather(nextDaysWeather){
 function render5Days(array){
     let HtmlResult = "";
 
+    console.log(array)
+
     array.forEach(( e ) => {
         const { dt_txt,  icon, min, max, description} = e;
         
@@ -276,12 +275,7 @@ function getDayOfDate(date){
 
     
     let day = new Date(date).getDate();
-    if(day == new Date().getDate()){
-        return 'Today'
-    }
-    else {
-        return day;
-    }
+    return day
 }
 
 function get8Hours(array){
@@ -299,26 +293,33 @@ function render8Hours(array){
 
     let HtmlResult = "";
 
-    console.log(array)
-
     array.forEach(( e ) => {
         const { dt_txt, temp, icon } = e;
         
         const temperatura = convertTemp(temp);
-        const day = toHour(new Date(dt_txt).getTime())
-        
+        const hour = toHour(new Date(dt_txt).getTime())
         const icone = getIcon(icon);
+        let day = '';
+
+        if(hour == '00:00'){
+            day = 'Day '+ new Date(dt_txt).getDate();
+        }
 
         const HtmlPrevisao = `
         <div class='forecast-data'>
+        
+            <span>${day}</span>
             ${icone}
             <span>${temperatura}°C</span>
-            <span>${day}</span>
+            <span>${hour}</span>
         </div>
         `;
         HtmlResult += HtmlPrevisao;
-      })
-  
+        console.log(day)
+    })
+
+      
+    
     forecast.innerHTML = HtmlResult;
 }
 
