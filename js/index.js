@@ -9,18 +9,16 @@ let coordEndpoint = "https://api.openweathermap.org/geo/1.0/direct?q="
 let weatherEndpoint = "https://api.openweathermap.org/data/2.5/weather?"
 let nextDaysEndpoint = "https://api.openweathermap.org/data/2.5/forecast?"
 
-
-
 window.addEventListener('load', () => {
     fetchCoord("mairinque")
     getCity()
+    reload()
 });
 
 function getCity(){
     input.addEventListener("click", function(e){
         e.preventDefault();
         let city = document.getElementById('search').value
-        console.log(city)
         fetchCoord(city)
         
     })
@@ -238,8 +236,6 @@ function get5DaysWeather(nextDaysWeather){
 function render5Days(array){
     let HtmlResult = "";
 
-    console.log(array)
-
     array.forEach(( e ) => {
         const { dt_txt,  icon, min, max, description} = e;
         
@@ -316,7 +312,6 @@ function render8Hours(array){
         </div>
         `;
         HtmlResult += HtmlPrevisao;
-        console.log(day)
     })
 
       
@@ -376,4 +371,14 @@ function unixtoTime(time){
     hour = toHour(dateString)
 
     return hour;
+}
+
+function reload(){
+    // let blurred = false;
+    // window.onblur = function() { blurred = true; };
+    // window.onfocus = function() { blurred && (location.reload()); };
+
+    setTimeout(function(){
+        window.location.reload();
+    }, 3600000);
 }
